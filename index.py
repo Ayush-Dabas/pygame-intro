@@ -1,0 +1,32 @@
+import pygame
+import sys
+from pygame.locals import *
+import random
+
+pygame.init()
+
+FPS = pygame.time.Clock()
+FPS.tick(60)
+
+BLUE = (0, 0, 255)
+RED = (255, 0, 0)
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+
+SCREEN_WIDTH = 480
+SCREEN_HEIGHT = 640
+
+DISPLAYSURF = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+DISPLAYSURF.fill(WHITE)
+pygame.display.set_caption("Game")
+# Game loop
+while True:
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+
+    DISPLAYSURF.fill(WHITE)
+    pygame.display.update()
+    # FramePerSec.tick(FPS)
